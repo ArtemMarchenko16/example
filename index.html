@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div style="height: 50vh;">
+    <div id="silverBlock" style="height: 100px; width: 100px; background-color: silver;">
+
+    </div>
+  </div>
+  <hr>
+  <div style="display: flex;  ">
+    <div style="width: 50%;">
+
+      <input id="inpWidth" placeholder="Enter your width:">
+      <select id="unit1">
+        <option>px</option>
+        <option>%</option>
+        <option>vw</option>
+      </select>
+      <br>
+      <input id="inpHeight" placeholder="Enter your height:">
+      <select id="unit2">
+        <option>px</option>
+        <option>%</option>
+        <option>vw</option>
+      </select>
+      <br>
+      <input type="color" id="colorForBlock" name="color">
+      <br>
+      <input type="text" id="getText" placeholder="Enter your text:">
+      <br>
+      <label for="border">
+        border
+      </label>
+      <input type="checkbox" name="border" id="getCheckBox">
+      <input id="inpBorder" placeholder="Enter your border:">
+      <select id="unit3">
+        <option>px</option>
+        <option>vw</option>
+      </select>
+
+      <button onclick="addStyles()">hello</button>
+    </div>
+    <div id="infoAboutCode" style="width: 50%;">
+
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
