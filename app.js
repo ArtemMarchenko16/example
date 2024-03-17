@@ -1,12 +1,12 @@
-function addStyles () {
-    let styles = []; 
+function addStyles() {
+    let styles = [];
 
     //width:
     let getId = document.getElementById("inpWidth").value;
-    
+
     let getSilverBlock = document.getElementById("silverBlock");
     let unit = document.getElementById("unit1").value;
-    getSilverBlock.style.width = `${getId}${unit}`;    
+    getSilverBlock.style.width = `${getId}${unit}`;
     styles.push(`width: ${getId}${unit};`)
 
     //height:
@@ -28,9 +28,9 @@ function addStyles () {
     //border:
     let getInpBorder = document.getElementById("inpBorder").value;
     let getUnit3 = document.getElementById("unit3").value;
-    
-    
-    
+    let colorForBorder = document.getElementById("colorForBorder").value;
+
+
     let getBorder = document.getElementById("getCheckBox");
     // if (getBorder.checked) {
     //     getSilverBlock.style.border = "3px solid black";
@@ -38,16 +38,18 @@ function addStyles () {
     //     getSilverBlock.style.border = " "
     // }
 
-   (getBorder.checked)?(getSilverBlock.style.border = `${getInpBorder}${getUnit3} solid`):(getSilverBlock.style.border = "");
-   styles.push(`border: ${getInpBorder}${getUnit3} solid;`);
-   
-    //output:
+    (getBorder.checked) ? (getSilverBlock.style.border = `${getInpBorder}${getUnit3} solid ${colorForBorder}`) : (getSilverBlock.style.border = "");
+    styles.push(`border: ${getInpBorder}${getUnit3} solid ${colorForBorder};`);
 
+    //output:
     let getCodeInfo = document.getElementById("infoAboutCode");
-    let xxx = styles.join(" ");
+    let xxx = styles.join("\n");
     console.log(styles);
-    getCodeInfo.innerText = xxx;
-    
+    getCodeInfo.innerText = xxx
+
+
+    //color Border:
+    // getSilverBlock.style.borderColor = colorForBorder.value;
 
 
 }
